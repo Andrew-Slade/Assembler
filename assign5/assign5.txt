@@ -1,0 +1,250 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 12.20.44 JOB08712 ---- FRIDAY,    13 OCT 2017 ----
+ 12.20.44 JOB08712  IRR010I  USERID KC03H99  IS ASSIGNED TO THIS JOB.
+ 12.20.44 JOB08712  ICH70001I KC03H99  LAST ACCESS AT 12:19:09 ON FRIDAY, OCTOBER 13, 2017
+ 12.20.44 JOB08712  $HASP373 KC03H99A STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 12.20.44 JOB08712  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 12.20.44 JOB08712  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 12.20.44 JOB08712  -KC03H99A                      00     53 ******    .00     .0    140   0      0      0      0     0
+ 12.20.44 JOB08712  -KC03H99A ENDED.  NAME-ANDREW SLADE         TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 12.20.44 JOB08712  $HASP395 KC03H99A ENDED
+0------ JES2 JOB STATISTICS ------
+-  13 OCT 2017 JOB EXECUTION DATE
+-          190 CARDS READ
+-          250 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           27 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03H99A JOB ,'ANDREW SLADE',MSGCLASS=H                               JOB08712
+         2 //JSTEP01 EXEC PGM=ASSIST                                               00020001
+         3 //STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        00030001
+         4 //SYSPRINT DD SYSOUT=*                                                  00040001
+         5 //SYSIN    DD *                                                         00050001
+           //*                                                                     01590004
+         6 //FT05F001 DD *                                                         01600005
+           //*                                                                     01690003
+         7 //FT06F001 DD SYSOUT=*                                                  01700003
+           //*                                                                     01710003
+         8 //SYSPRINT DD SYSOUT=*                                                  01720003
+ ICH70001I KC03H99  LAST ACCESS AT 12:19:09 ON FRIDAY, OCTOBER 13, 2017
+ IEF236I ALLOC. FOR KC03H99A JSTEP01
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF237I JES2 ALLOCATED TO FT05F001
+ IEF237I JES2 ALLOCATED TO FT06F001
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF142I KC03H99A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03H99.KC03H99A.JOB08712.D0000103.?         SYSOUT        
+ IEF285I   KC03H99.KC03H99A.JOB08712.D0000101.?         SYSIN         
+ IEF285I   KC03H99.KC03H99A.JOB08712.D0000102.?         SYSIN         
+ IEF285I   KC03H99.KC03H99A.JOB08712.D0000104.?         SYSOUT        
+ IEF285I   KC03H99.KC03H99A.JOB08712.D0000105.?         SYSOUT        
+ IEF373I STEP/JSTEP01 /START 2017286.1220
+ IEF032I STEP/JSTEP01 /STOP  2017286.1220 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11496K
+         ATB- REAL:                    12K  SLOTS:                     0K
+              VIRT- ALLOC:       2M SHRD:       0M
+ IEF375I  JOB/KC03H99A/START 2017286.1220
+ IEF033I  JOB/KC03H99A/STOP  2017286.1220 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ***************************************************                     00060001         
+                                       2 * ASSIGNMENT 3 - BASIC ASSEMBLY PROGRAM           *                     00070001         
+                                       3 * ANDREW SLADE                                    *                     00080001         
+                                       4 * DATE DUE: 10/13/2017                            *                     00090001         
+                                       5 ***************************************************                     00100001         
+                                       6 *PROCEDURE                                        *                     00110001         
+                                       7 *   *                                             *                     00120001         
+                                       8 *1 CLEAR OUT RELEVANT REGISTERS                   *                     00130059         
+                                       9 *2 LOAD ANY USED CONSTANTS                        *                     00140059         
+                                      10 *3 READ RECORDS                                   *                     00150059         
+                                      11 *4 CALCULATE GROSS PAY, BONUSES, EMPLOYEE COUNT   *                     00160059         
+                                      12 *5 CALCULATE AVERAGE GROSS PAY                    *                     00170059         
+                                      13 *6 OUTPUT ALL RECORDS                             *                     00180059         
+                                      14 *7 OUTPUT GROSS PAY, BONUSES, EMPLOYEE COUNT      *                     00190059         
+                                      15 *8 OUTPUT AVERAGE GROSS PAY                       *                     00200059         
+                                      16 *   *                                             *                     00201099         
+                                      17 *FUNCTION:                                        *                     00202099         
+                                      18 *   *     TO READ ALL OF THE RECORDS, PRINT EACH  *                     00203099         
+                                      19 *   *     RECORD ON A LINE, AND THEN CALCULATE    *                     00204099         
+                                      20 *   *     TOTAL GROSS PAY, EMPLOYEE COUNT, TOTAL  *                     00205099         
+                                      21 *   *     BONUSES, AND AVERAGE GROSS.             *                     00206099         
+                                      22 *   *                                             *                     00208099         
+                                      23 *INPUT: RECORDS REGARDING VARIOUS INFORMATION     *                     00209099         
+                                      24 *       ABOUT EMPLOYEES AND THEIR EARNINGS        *                     00209199         
+                                      25 *  *                                              *                     00209299         
+                                      26 *ENTRY CONDS: NONE                                *                     00209399         
+                                      27 *  *                                              *                     00209699         
+                                      28 *EXIT CONDS: NONE                                 *                     00209799         
+                                      29 *  *                                              *                     00209899         
+                                      30 *NOTES: NONE                                      *                     00210099         
+                                      31 *  *                                              *                     00210199         
+                                      32 *OUTPUT: A REPORT SHOWING DATA FOR EVERY EMPLOYEE *                     00210399         
+                                      33 *   *                                             *                     00210499         
+                                      34 *REGISTER USAGE: R2: STORAGE FOR EMPLOYEE ID      *                     00210599         
+                                      35 *                    ALSO USED TO CALC AVG GROSS  *                     00210699         
+                                      36 *                R3: STORAGE FOR HOURLY PAY       *                     00210799         
+                                      37 *                    ALSO USED TO CALC AVG GROSS  *                     00210899         
+                                      38 *                R4: STORAGE FOR NUMBER OF HOURS  *                     00210999         
+                                      39 *                R5: STORAGE FOR DEDUCTIONS       *                     00211099         
+                                      40 *                    ALSO USED TO CALC AVG GROSS  *                     00211199         
+                                      41 *                R6: STORAGE FOR BONUS AMOUNT     *                     00211299         
+                                      42 *                R7: DIVISION                     *                     00211399         
+                                      43 *                R8: MULTIPLICATION TO CALC GROSS *                     00211499         
+                                      44 *                R9: MULTIPLICATION TO CALC GROSS *                     00211599         
+                                      45 *                R10: HOLDS EMPLOYEE COUNT        *                     00211699         
+                                      46 *                R12: HOLDS TOTAL TEMPORARILY     *                     00211799         
+                                      47 ***************************************************                     00212001         
+ 000000                               48 ASSIGN5  CSECT                                                          00220001         
+ 000000                               49          USING ASSIGN5,15        ESTABLISH ADDRESSABILITY               00240001         
+ 000000 1BAA                          50          SR    10,10             PREPARE A SPACE TO HOLD INCREMENT      00260099         
+ 000002 1BCC                          51          SR    12,12             PREPARE A SPACE FOR GROSS TOTAL        00270099         
+ 000004 E000 F0C0 0050 000C0          52          XREAD BUFFER,80         READ INTO BUFFER                       00280001         
+1                                                                                                               PAGE    2         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                      53 *                                                                       00290099         
+ 00000A 4740 F088            00088    54 READF    BC    B'0100',ENDREADF  BREAK ALL RECORDS READ                 00300099         
+ 00000E 41A0 A001            00001    55          LA    10,1(,10)         INCREMENT EMPLOYEE COUNT               00320099         
+ 000012 50A0 F224            00224    56          ST    10,TEMP           STORE EMPLOYEE COUNT                   00330099         
+                                      57 *  READ RECORDS                                                         00340047         
+ 000016 5320 F0C0            000C0    58          XDECI 2,BUFFER          CONVERT EMPLOYEE ID                    00350006         
+ 00001A D218 F115 1013 00115 00013    59          MVC   NAME(25),19(1)    MOVE NAME TO STORAGE                   00360019         
+ 000020 5330 1000            00000    60          XDECI 3,0(0,1)          CONVERT HOURLY PAY                     00370009         
+ 000024 5340 1000            00000    61          XDECI 4,0(0,1)          CONVERT NUMBER OF HOURS                00380006         
+ 000028 5350 1000            00000    62          XDECI 5,0(0,1)          CONVERT DEDUCTION AMOUNT               00390006         
+ 00002C 5360 1000            00000    63          XDECI 6,0(0,1)          CONVERT BONUS AMOUNT                   00400006         
+                                      64 *                                                                       00401099         
+ 000030 5220 F133            00133    65          XDECO 2,VAL1            CONVERT ITEM TO CHAR FORM              00410019         
+ 000034 5230 F143            00143    66          XDECO 3,VAL2            CONVERT SECOND ITEM LIKEWISE           00420019         
+ 000038 5240 F153            00153    67          XDECO 4,VAL3            CONVERT THIRD ITEM LIKEWISE            00430019         
+ 00003C 5250 F163            00163    68          XDECO 5,VAL4            CONVERT FOURTH ITEM LIKEWISE           00440019         
+ 000040 5260 F173            00173    69          XDECO 6,VAL5            CONVERT FIFTH ITEM LIKEWISE            00450019         
+                                      70 * TOTALGROSS PAY AND EMPLOYEE COUNT CALCULATIONS                        00470059         
+ 000044 1B77                          71          SR    7,7               PREPARE A SPACE FOR PAY                00480099         
+ 000046 1B88                          72          SR    8,8               PREPARE A SPACE FOR HOURS              00490099         
+ 000048 1B99                          73          SR    9,9               PREPARE A SPACE FOR MULTIPLICATION     00500099         
+                                      74 *                                                                       00501099         
+ 00004A 1873                          75          LR    7,3               LOAD PAY                               00510099         
+ 00004C 1894                          76          LR    9,4               LOAD HOURS                             00520099         
+ 00004E 1C87                          77          MR    8,7               MULTIPLY PAY BY HOURS                  00530036         
+ 000050 1B95                          78          SR    9,5               SUBTRACT DEDUCTION AMOUNT              00540041         
+ 000052 1A96                          79          AR    9,6               ADD BONUS AMOUNT                       00550041         
+ 000054 5090 F21C            0021C    80          ST    9,GNTOT           STORE LINE COUNT                       00560041         
+ 000058 5290 F183            00183    81          XDECO 9,GROS            STORE GROSS PER PERSON                 00570041         
+                                      82 *                                                                       00571099         
+ 00005C 1AC9                          83          AR    12,9              PUSH GROSS TOTAL TO ANOTHER LOCATION   00580099         
+ 00005E 50C0 F1B8            001B8    84          ST    12,TOTAL          STORES GROSS TOTAL                     00590099         
+ 000062 58C0 F1B8            001B8    85          L     12,TOTAL          LOAD TOTAL GROSS                       00600099         
+ 000066 E020 F110 0085 00110          86          XPRNT CCV,133           PRINT READ RECORD                      00610092         
+                                      87 * TOTAL BONUS CALCULATION                                               00630059         
+ 00006C 5870 F220            00220    88          L     7,BNS             LOAD TOTAL BONUS                       00640099         
+ 000070 1B33                          89          SR    3,3               PREPARE A SPACE FOR DIVISION           00650099         
+ 000072 1836                          90          LR    3,6               LOAD BONUS AMOUNT                      00660099         
+ 000074 1A73                          91          AR    7,3               ADD  BONUS WITH PREVIOUS BONUS         00670047         
+ 000076 5070 F220            00220    92          ST    7,BNS             STORE BONUS AMOUNT                     00680099         
+ 00007A 5270 F2D0            002D0    93          XDECO 7,TOBNS           STORE BONUS AMOUNT IN PRINTABLE FORM   00690059         
+                                      94 * READ AND PRINT RECORDS                                                00710065         
+ 00007E E000 F0C0 0050 000C0          95          XREAD BUFFER,80         READ INTO BUFFER                       00720001         
+ 000084 47F0 F00A            0000A    96          BC    B'1111',READF     LOOP BACK TO READF FOR ANY CODE        00740001         
+ 000088 52A0 F24B            0024B    97 ENDREADF XDECO 10,LINES          STORE NUMBER OF LINES                  00760001         
+ 00008C 52C0 F1B8            001B8    98          XDECO 12,TOTAL          STORE TOTAL AS CHAR                    00780001         
+                                      99 * CALCULATE AVERAGE GROSS                                               00790060         
+ 000090 1B33                         100          SR    3,3               PREPARE A SPACE FOR TOTAL GROSS        00800099         
+ 000092 1B22                         101          SR    2,2               PREPARE A SPACE FOR DIVISION           00810099         
+ 000094 1B55                         102          SR    5,5               PREPARE A SPACE FOR EMPLOYEE COUNT     00820099         
+                                     103 *                                                                       00821099         
+ 000096 183C                         104          LR    3,12              LOADS TOTAL GROSS                      00830099         
+ 000098 185A                         105          LR    5,10              LOADS EMPLOYEE COUNT                   00840099         
+ 00009A 1D25                         106          DR    2,5               DIVIDE GROSS BY EMPLOYEES              00850062         
+ 00009C 5230 F355            00355   107          XDECO 3,AVGGS           STORE AVERAGE GROSS                    00860063         
+                                     108 * PRINT ALL VALUES THEN BRANCH TO OS                                    00870065         
+ 0000A0 E020 F228 0085 00228         109          XPRNT CCC,133           PRNT RECORD NUMBER                     00960001         
+1                                                                                                               PAGE    3         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 0000A6 E020 F2AD 0085 002AD         110          XPRNT CCL,133           PRNT TOTAL BONUSES                     00970063         
+ 0000AC E020 F195 0085 00195         111          XPRNT CCQ,133           PRNT GROSS PAY                         00980063         
+ 0000B2 E020 F332 0085 00332         112          XPRNT CCT,133           PRNT AVERAGE GROSS                     00990063         
+                                     113 *                                                                       00991099         
+ 0000B8 07FE                         114          BR    14                BRANCH TO OS                           01000019         
+                                     115 *                                                                       01010099         
+                                     116          LTORG                                                          01020001         
+ 0000C0 6C6C6C6C6C6C6C6C             117 BUFFER   DC    80C'%'            CREATES BUFFER AND FILLS               01040001         
+                                     118 *                                                                       01050001         
+ 000110 F0                           119 CCV      DC    C'0'              CARRIAGE CONTROL                       01060001         
+ 000111 40404040                     120          DC     4C' '            SPACES                                 01070099         
+ 000115                              121 NAME     DS    CL25              STORAGE FOR NAME                       01080018         
+ 00012E 4040404040                   122          DC     5C' '            SPACES                                 01090099         
+ 000133                              123 VAL1     DS    CL12              STORAGE FOR ID                         01100018         
+ 00013F 40404040                     124          DC     4C' '            SPACES                                 01110099         
+ 000143                              125 VAL2     DS    CL12              STORAGE FOR PAY                        01120018         
+ 00014F 40404040                     126          DC     4C' '            SPACES                                 01130093         
+ 000153                              127 VAL3     DS    CL12              STORAGE FOR HOURS                      01140018         
+ 00015F 40404040                     128          DC     4C' '            SPACES                                 01150093         
+ 000163                              129 VAL4     DS    CL12              STORAGE FOR DEDUCTION                  01160018         
+ 00016F 40404040                     130          DC     4C' '            SPACES                                 01170093         
+ 000173                              131 VAL5     DS    CL12              STORAGE FOR BONUS                      01180018         
+ 00017F 40404040                     132          DC     4C' '            SPACES                                 01190093         
+ 000183                              133 GROS     DS    CL12              STORAGE FOR THE GROSS                  01200093         
+ 00018F 404040404040                 134          DC     6C' '            SPACES                                 01210099         
+                                     135 *                                                                       01220099         
+ 000195 F0                           136 CCQ      DC    C'0'              CARRIAGE CONTROL                       01230086         
+ 000196 4040404040404040             137          DC     9C' '             SPACES                                01240099         
+ 00019F E3D6E3C1D340C7D9             138 GROSS    DC    C'TOTAL GROSS PAY:'                                      01250099         
+ 0001AF 4040404040404040             139          DC     9C' '            SPACES                                 01260099         
+ 0001B8 7C7C7C7C7C7C7C7C             140 TOTAL    DC    12C'@'            STORAGE FOR GROSS PAY                  01270057         
+ 0001C4 4040404040404040             141          DC    86C' '            SPACES                                 01280099         
+                                     142 *                                                                       01290099         
+ 00021C 00000000                     143 GNTOT    DC    F'0'              STORAGE FOR LINE TOTAL                 01300001         
+                                     144 *                                                                       01310099         
+ 000220 00000000                     145 BNS      DC    F'0'              STORES BONUS AMOUNT                    01320047         
+                                     146 *                                                                       01330099         
+ 000224 00000000                     147 TEMP     DC    F'0'              STORES TEMPORARY HOLDER FOR VAL        01340072         
+                                     148 *                                                                       01350099         
+ 000228 F0                           149 CCC      DC    C'0'              CARRIAGE CONTROL                       01360077         
+ 000229 40404040                     150          DC    4C' '             SPACES                                 01370094         
+ 00022D E3D6E3C1D340C5D4             151 LINECNT  DC    C'TOTAL EMPLOYEE COUNT:'                                 01380018         
+ 000242 4040404040404040             152          DC    9C' '             SPACES                                 01390099         
+ 00024B 7C7C7C7C7C7C7C7C             153 LINES    DC    12C'@'            STORES TOTAL NUMBER OF LINES           01400001         
+ 000257 4040404040404040             154          DC    86C' '            SPACES                                 01410099         
+                                     155 *                                                                       01420099         
+ 0002AD F0                           156 CCL      DC    C'0'              CARRIAGE CONTROL                       01430088         
+ 0002AE 4040404040404040             157          DC    11C' '             SPACES                                01440099         
+ 0002B9 E3D6E3C1D340C2D6             158 BONUS    DC    C'TOTAL BONUSES:'                                        01450072         
+ 0002C7 4040404040404040             159          DC     9C' '            SPACES                                 01460099         
+ 0002D0 7C7C7C7C7C7C7C7C             160 TOBNS    DC    12C'@'            STORES TOTAL BONUSES                   01470047         
+ 0002DC 4040404040404040             161          DC    86C' '            SPACES                                 01480099         
+                                     162 *                                                                       01490099         
+ 000332 F0                           163 CCT      DC    C'0'                                                     01500077         
+ 000333 40404040404040               164          DC     7C' '             SPACES                                01510099         
+ 00033A C1E5C5D9C1C7C540             165 AVGGR    DC    C'AVERAGE GROSS PAY:'                                    01520063         
+ 00034C 4040404040404040             166          DC     9C' '            SPACES                                 01530099         
+1                                                                                                               PAGE    4         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 000355 7C7C7C7C7C7C7C7C             167 AVGGS    DC    12C'@'            STORES TOTAL BONUSES                   01540063         
+ 000361 4040404040404040             168          DC    86C' '            SPACES                                 01550099         
+                                     169 *                                                                       01560099         
+                                     170          END   ASSIGN5                                                  01570003         
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:    8868 HIGH:     812 LEAVING:  483888 FREE BYTES. AVERAGE:       56 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.001 SECS,   171000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+0    JOAN TOWER                           12345              15              80              25             500            1675   
+0    WOLFGANG AMADEUS MOZART              23456              19              80               0              10            1530   
+0    RICHARD STRAUSS                      22132              10              80              31             200             969   
+0    AMY BEACH                            65465              22              80              15             900            2645   
+0    DAME ETHEL SMYTHE                    44560              23              28              34              70             680   
+0    PETER ILYICH TCHAIKOVSKY             99870              22              80              21               0            1739   
+0    ANTON BRUCKNER                       14966              20              78               0             210            1770   
+0    TOTAL EMPLOYEE COUNT:                    7                                                                                   
+0           TOTAL BONUSES:                 1890                                                                                   
+0         TOTAL GROSS PAY:                11008                                                                                   
+0       AVERAGE GROSS PAY:                 1572                                                                                   
+0*** EXECUTION TIME =    0.000 SECS.       270 INSTRUCTIONS EXECUTED -   270000 INSTRUCTIONS/SEC ***                              
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                

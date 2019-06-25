@@ -1,0 +1,326 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 11.44.17 JOB00099 ---- WEDNESDAY, 01 NOV 2017 ----
+ 11.44.17 JOB00099  IRR010I  USERID KC03H99  IS ASSIGNED TO THIS JOB.
+ 11.44.17 JOB00099  ICH70001I KC03H99  LAST ACCESS AT 11:42:46 ON WEDNESDAY, NOVEMBER 1, 2017
+ 11.44.17 JOB00099  $HASP373 KC03H99A STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 11.44.17 JOB00099  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 11.44.17 JOB00099  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 11.44.17 JOB00099  -KC03H99A                      00     57 ******    .00     .0    162   0      0      0      0     0
+ 11.44.17 JOB00099  -KC03H99A ENDED.  NAME-ANDREW SLADE         TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 11.44.17 JOB00099  $HASP395 KC03H99A ENDED
+0------ JES2 JOB STATISTICS ------
+-  01 NOV 2017 JOB EXECUTION DATE
+-          237 CARDS READ
+-          326 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           35 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03H99A JOB ,'ANDREW SLADE',MSGCLASS=H                               JOB00099
+         2 //JSTEP01 EXEC PGM=ASSIST                                               00020000
+         3 //STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        00030000
+         4 //SYSPRINT DD SYSOUT=*                                                  00040000
+         5 //FT05F001 DD DSN=KC02322.CSCI360.DATAFA17(DATA7),DISP=SHR              00050001
+         6 //SYSIN    DD *                                                         00060000
+ ICH70001I KC03H99  LAST ACCESS AT 11:42:46 ON WEDNESDAY, NOVEMBER 1, 2017
+ IEF236I ALLOC. FOR KC03H99A JSTEP01
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME FT05F001
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I KC03H99A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03H99.KC03H99A.JOB00099.D0000102.?         SYSOUT        
+ IGD104I KC02322.CSCI360.DATAFA17                     RETAINED,  DDNAME=FT05F001
+ IEF285I   KC03H99.KC03H99A.JOB00099.D0000101.?         SYSIN         
+ IEF373I STEP/JSTEP01 /START 2017305.1144
+ IEF032I STEP/JSTEP01 /STOP  2017305.1144 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11528K
+         ATB- REAL:                    12K  SLOTS:                     0K
+              VIRT- ALLOC:       2M SHRD:       0M
+ IEF375I  JOB/KC03H99A/START 2017305.1144
+ IEF033I  JOB/KC03H99A/STOP  2017305.1144 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ***************************************************                     00070000         
+                                       2 * ASSIGNMENT 7- CONDITIONALS AND EXT MNEMONICS    *                     00080000         
+                                       3 * ANDREW SLADE                                    *                     00090000         
+                                       4 * DATE DUE: 11/01/2017                            *                     00100000         
+                                       5 ***************************************************                     00110000         
+                                       6 *PROCEDURE                                        *                     00120000         
+                                       7 *   *                                             *                     00130000         
+                                       8 *1 PRINT HEADER                                   *                     00140099         
+                                       9 *   *                                             *                     00150099         
+                                      10 *2 CLEAR REGISTERS                                *                     00160099         
+                                      11 *   *                                             *                     00170099         
+                                      12 *3 READ RECORDS                                   *                     00180099         
+                                      13 *   *                                             *                     00190099         
+                                      14 *4 COMPUTE TOTAL                                  *                     00200099         
+                                      15 *   *                                             *                     00210099         
+                                      16 *5 COUNT RECORDS                                  *                     00220099         
+                                      17 *   *                                             *                     00230099         
+                                      18 *6 COMPARE RECORDS WITH ZERO                      *                     00240099         
+                                      19 *   *                                             *                     00250099         
+                                      20 *7 STORE HIGHEST OR LOWEST VALUE                  *                     00260099         
+                                      21 *   *                                             *                     00270099         
+                                      22 *8 COUNT NUMBER OF POSITIVE VALUES, NEGATIVE VAL- *                     00280099         
+                                      23 *  UES, AND ZERO VALUES                           *                     00290099         
+                                      24 *   *                                             *                     00300099         
+                                      25 *9 CALCULATE AVERGAGE VALUE                       *                     00310099         
+                                      26 *   *                                             *                     00320099         
+                                      27 *10 STORE VALUES                                  *                     00330099         
+                                      28 *   *                                             *                     00340099         
+                                      29 *11 PRINT REPORTS                                 *                     00350099         
+                                      30 *   *                                             *                     00360000         
+                                      31 *FUNCTION: READ DATA SET, PROCESS DATA, OUTPUT    *                     00370087         
+                                      32 *   *      META DATA AS WELL AS DATA SET WITH LAB-*                     00380087         
+                                      33 *   *      ELS. COUNT NEGATIVE, POSITIVE, AND     *                     00390087         
+                                      34 *   *      ZERO VALUES AS WELL AS STORING HIGHEST,*                     00400087         
+                                      35 *   *      LOWEST AND AVERAGE VALUES.             *                     00410087         
+                                      36 *INPUT: A DATAFILE FROM ANOTHER USER              *                     00420087         
+                                      37 *  *                                              *                     00430000         
+                                      38 *ENTRY CONDS: NONE                                *                     00440000         
+                                      39 *  *                                              *                     00450000         
+                                      40 *EXIT CONDS: NONE                                 *                     00460000         
+                                      41 *  *                                              *                     00470000         
+                                      42 *NOTES: NONE                                      *                     00480000         
+                                      43 *  *                                              *                     00490000         
+                                      44 *OUTPUT: A REPORT SHOWING META DATA FOR THE DATA  *                     00500000         
+                                      45 *  *     SET.                                     *                     00510000         
+                                      46 *  *                                              *                     00520000         
+                                      47 *REGISTER USAGE: R2: READS IN RECORDS             *                     00530087         
+                                      48 *  *             R4: USED IN DIVISION AS THE EVEN *                     00540099         
+                                      49 *  *                 COMPONENT OF THE PAIR        *                     00550099         
+                                      50 *  *             R5: HOLDS TOTAL IN DIVISION, IS  *                     00560099         
+                                      51 *  *                 THE ODD COMPONENT OF THE PAIR*                     00570099         
+                                      52 *  *             R6: HOLDS THE RECORD COUNT IN THE*                     00580099         
+1                                                                                                               PAGE    2         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                      53 *  *                 DIVISION PROCESS             *                     00590099         
+                                      54 *  *             R10: USED TO COUNT RECORDS       *                     00600099         
+                                      55 *  *             R11: USED TO COUNT NEGATIVE, POS-*                     00610099         
+                                      56 *  *                  ITIVE, AND ZERO VALUES      *                     00620099         
+                                      57 *  *             R12: HOLDS TOTAL OF ALL VALUES   *                     00630099         
+                                      58 *  *             R14: HOLDS SYSTEM ADDRESS        *                     00640087         
+                                      59 *  *             R15: HOLDS PROGRAM FOR ADDRESSAB-*                     00650087         
+                                      60 *  *                   ILITY                      *                     00660087         
+                                      61 ***************************************************                     00670000         
+ 000000                               62 ASSIGN7  CSECT                                                          00680000         
+ 000000                               63          USING ASSIGN7,15        ESTABLISH ADDRESSABILITY               00690000         
+                                      64 *                                                                       00700000         
+ 000000 E020 F244 0085 00244          65          XPRNT CCA,133           PRINT HEADER #1                        00710019         
+                                      66 *                                                                       00720099         
+ 000006 1BCC                          67          SR    12,12             CLEAR AN AREA FOR TOTAL                00730099         
+ 000008 1BAA                          68          SR    10,10             CLEAR AN AREA FOR INCREMENT            00740099         
+ 00000A 1B44                          69          SR    4,4               CLEAR AN AREA FOR DIVISION             00750099         
+ 00000C 1B55                          70          SR    5,5               CLEAR AN AREA FOR TOTAL                00760099         
+ 00000E 1B66                          71          SR    6,6               CLEAR AN AREA FOR RECCOUNT             00770099         
+                                      72 *                                                                       00780099         
+ 000010 E000 F12E 0050 0012E          73          XREAD BUFFER,80         READ INTO BUFFER                       00790000         
+                                      74 *                                                                       00800000         
+ 000016 4740 F0D0            000D0    75 READF    BL    ENDREADF          BREAK ALL RECORDS READ                 00810053         
+                                      76 * READ RECORDS                                                          00820099         
+ 00001A 5320 F12E            0012E    77          XDECI 2,BUFFER          CONVERT VALUE 1                        00830007         
+ 00001E 1AC2                          78          AR    12,2              ADD VALUES TOGETHER                    00840099         
+ 000020 50C0 F194            00194    79          ST    12,TOTAL          STORE TOTAL                            00850099         
+                                      80 * COUNT RECORDS                                                         00860099         
+ 000024 41A0 A001            00001    81          LA    10,1(0,10)        INCREMENT RECORD COUNT                 00870099         
+                                      82 * COMPARE VALUES                                                        00880099         
+ 000028 1222                          83          LTR   2,2               TEST VALUES                            00890099         
+ 00002A 4720 F036            00036    84          BH    POS               BRANCH TO POSITIVE IF POS              00900099         
+ 00002E 4740 F060            00060    85          BL    NEG               BRANCH TO NEGATIVE IF NEG              00910099         
+ 000032 4780 F08A            0008A    86          BZ    ZERO              BRANCH TO ZERO IF ZERO                 00920099         
+                                      87 * POSITIVE BRANCH                                                       00930079         
+ 000036 D207 F1C1 F22C 001C1 0022C    88 POS      MVC   STATUS(8),PO      MOVE 'POSITIVE' TO OUT                 00940099         
+ 00003C 58B0 F180            00180    89          L     11,PI             LOAD POSITIVE COUNT                    00950086         
+ 000040 41B0 B001            00001    90          LA    11,1(0,11)        INCREMENT                              00960075         
+ 000044 50B0 F180            00180    91          ST    11,PI             STORE                                  00970075         
+ 000048 5920 F18C            0018C    92          C     2,CURRP           COMPARE POSITIVE VALS                  00980099         
+ 00004C 4720 F054            00054    93          BH    HIGHER            BRANCH ON GREATER THAN                 00990099         
+ 000050 47D0 F05C            0005C    94          BNH   ENDP              BRANCH OTHERWISE                       01000099         
+ 000054 5220 F57D            0057D    95 HIGHER   XDECO 2,HIGH            STORE                                  01010099         
+ 000058 5020 F18C            0018C    96          ST    2,CURRP           STORE TEMP VALUE                       01020099         
+ 00005C 47F0 F0A0            000A0    97 ENDP     B     OVER              END PROCESS                            01040099         
+                                      98 * NEGATIVE BRANCH                                                       01050079         
+ 000060 D207 F1C1 F234 001C1 00234    99 NEG      MVC   STATUS(8),NE      STORE 'NEGATIVE'                       01060058         
+ 000066 58B0 F184            00184   100          L     11,NI             LOAD NEGATIVE COUNT                    01070086         
+ 00006A 41B0 B001            00001   101          LA    11,1(0,11)        INCREMENT                              01080075         
+ 00006E 50B0 F184            00184   102          ST    11,NI             STORE                                  01090075         
+ 000072 5920 F190            00190   103          C     2,CURRN           COMPARE NEGATIVE VALS                  01100099         
+ 000076 4740 F07E            0007E   104          BL    LOWER             BRANCH ON LESS THAN                    01110099         
+ 00007A 47B0 F086            00086   105          BNL   ENDN              BRANCH ON NOT LESS THAN                01120099         
+ 00007E 5220 F602            00602   106 LOWER    XDECO 2,LOW             STORE LOWEST VAL                       01130099         
+ 000082 5020 F190            00190   107          ST    2,CURRN           STORE TEMP VALUE                       01140099         
+ 000086 47F0 F0A0            000A0   108 ENDN     B     OVER              END PROCESS                            01160099         
+                                     109 * ZERO BRANCH                                                           01170079         
+1                                                                                                               PAGE    3         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 00008A D207 F1C1 F23C 001C1 0023C   110 ZERO     MVC   STATUS(8),ZE      MOVE 'ZERO' TO OUTPUT                  01180099         
+ 000090 58B0 F188            00188   111          L     11,ZI             LOAD ZERO COUNT                        01190085         
+ 000094 41B0 B001            00001   112          LA    11,1(0,11)        INCREMENT                              01200086         
+ 000098 50B0 F188            00188   113          ST    11,ZI             STORE                                  01210075         
+ 00009C 47F0 F0A0            000A0   114 ENDZ     B     OVER              STORE 'ZERO'                           01220080         
+                                     115 * RETURN TO PROCESS                                                     01230079         
+ 0000A0 5220 F1B4            001B4   116 OVER     XDECO 2,VAL1            CONVERT VAL 1 TO CHAR FORM             01240054         
+ 0000A4 59A0 F128            00128   117          C     10,=F'1'          SEE IF THIS IS RECORD ONE              01241099         
+ 0000A8 4780 F0B0            000B0   118          BZ    ISONE             IF IT IS, DO RECORD ONE                01242099         
+ 0000AC 4770 F0BA            000BA   119          BNZ   ISNT              ELSE, DO RECORDS                       01242199         
+                                     120 * IS FIRST RECORD                                                       01242299         
+ 0000B0 D200 F19C F12C 0019C 0012C   121 ISONE    MVC   CCB(1),=C'0'      STORE DOUBLE SPACE                     01243099         
+ 0000B6 47F0 F0C0            000C0   122 ENDO     B     DONE              FINISH                                 01244099         
+                                     123 * IS NOT FIRST RECORD                                                   01244199         
+ 0000BA D200 F19C F12D 0019C 0012D   124 ISNT     MVC   CCB(1),=C' '      STORE SINGLE SPACE                     01245099         
+ 0000C0 E020 F19C 0085 0019C         125 DONE     XPRNT CCB,133           PRINT READ RECORD                      01250099         
+                                     126 *                                                                       01251099         
+ 0000C6 E000 F12E 0050 0012E         127          XREAD BUFFER,80         READ INTO BUFFER                       01260000         
+ 0000CC 47F0 F016            00016   128          B     READF             LOOP BACK TO READF FOR ANY CODE        01270029         
+ 0000D0 E020 F2CA 0085 002CA         129 ENDREADF XPRNT CCC,133           PRINT HEADER2                          01280077         
+                                     130 * CALC AVERAGE                                                          01290099         
+ 0000D6 1B44                         131          SR    4,4               CLEAR FOR DIVISION                     01300099         
+ 0000D8 1B55                         132          SR    5,5               CLEAR FOR DIVISION                     01310099         
+ 0000DA 1B66                         133          SR    6,6               CLEAR FOR DIVISION                     01320099         
+                                     134 *                                                                       01321099         
+ 0000DC 185C                         135          LR    5,12              LOAD TOTAL                             01330099         
+ 0000DE 186A                         136          LR    6,10              LOAD RECORD COUNT                      01340099         
+ 0000E0 1D46                         137          DR    4,6               DIVIDE TOTAL BY COUNT                  01350099         
+ 0000E2 5250 F4F8            004F8   138          XDECO 5,AVG             STORE AVERAGE                          01360099         
+                                     139 * END CALC AVERAGE                                                      01370099         
+ 0000E6 58B0 F188            00188   140          L     11,ZI             LOAD NUMBER OF ZEROS                   01380089         
+ 0000EA 52B0 F36A            0036A   141          XDECO 11,ZEROS          STORE NUMBER OF ZEROS AS CHAR          01390089         
+                                     142 *                                                                       01400099         
+ 0000EE 58B0 F180            00180   143          L     11,PI             LOAD NUMBER OF POSITIVES               01410095         
+ 0000F2 52B0 F3EE            003EE   144          XDECO 11,POSTS          STORE NUMBER OF POS AS CHAR            01420094         
+                                     145 *                                                                       01430099         
+ 0000F6 58B0 F184            00184   146          L     11,NI             LOAD NUMBER OF NEGATIVES               01440099         
+ 0000FA 52B0 F473            00473   147          XDECO 11,NEGS           STORE NUMBER OF NEGS AS CHAR           01450099         
+                                     148 * PRINT VALUES                                                          01460099         
+ 0000FE E020 F350 0085 00350         149          XPRNT CCD,133           PRINT ZERO NUMBER COUNT                01470094         
+ 000104 E020 F3D4 0085 003D4         150          XPRNT CCE,133           PRINT POSITIVE NUMBER COUNT            01480094         
+ 00010A E020 F459 0085 00459         151          XPRNT CCF,133           PRINT NEGATIVE NUMBER COUNT            01490099         
+ 000110 E020 F4DE 0085 004DE         152          XPRNT CCG,133           PRINT AVERAGE VALUE                    01500099         
+ 000116 E020 F563 0085 00563         153          XPRNT CCH,133           PRINT HIGHEST VALUE                    01510099         
+ 00011C E020 F5E8 0085 005E8         154          XPRNT CCI,133           PRINT LOWEST VALUE                     01520099         
+                                     155 *                                                                       01530099         
+ 000122 07FE                         156          BR    14                                                       01540099         
+                                     157 *                                                                       01550000         
+                                     158          LTORG                                                          01560000         
+ 000128 00000001                     159                =F'1'                                                                     
+ 00012C F0                           160                =C'0'                                                                     
+ 00012D 40                           161                =C' '                                                                     
+ 00012E 6C6C6C6C6C6C6C6C             162 BUFFER   DC    80C'%'            CREATES BUFFER AND FILLS               01570000         
+                                     163 *                                                                       01580000         
+ 000180 00000000                     164 PI       DC    F'0'              COUNT OF POSITIVE NUMBERS              01590085         
+ 000184 00000000                     165 NI       DC    F'0'              COUNT OF NEGATIVE NUMBERS              01600085         
+ 000188 00000000                     166 ZI       DC    F'0'              COUNT OF ZEROS                         01610085         
+1                                                                                                               PAGE    4         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 00018C 00000000                     167 CURRP    DC    F'0'              CURRENT POSITIVE VALUE                 01620099         
+ 000190 00000000                     168 CURRN    DC    F'0'              CURRENT NEGATIVE VALUE                 01630099         
+ 000194 00000000                     169 TOTAL    DC    F'0'              TOTAL                                  01640099         
+                                     170 *                                                                       01650065         
+ 000198 00000000                     171 INC      DC    F'0'              A PLACE TO HOLD RECORD COUNT           01660009         
+                                     172 *                                                                       01670009         
+ 00019C 40                           173 CCB      DC    C' '              CARRIAGE CONTROL                       01680099         
+ 00019D 404040404040                 174          DC     6C' '            SPACES                                 01690022         
+ 0001A3 D5E4D4C2C5D940D7             175          DC    C'NUMBER PROCESSED:'                                     01700020         
+ 0001B4                              176 VAL1     DS    CL12              STORAGE FOR VAL 2                      01710005         
+ 0001C0 40                           177          DC    C' '              SPACE                                  01720035         
+ 0001C1                              178 STATUS   DS    8C' '             VALUE OF COMPARISON                    01730044         
+ 0001C9 4040404040404040             179          DC     99C' '           SPACES                                 01740044         
+                                     180 *                                                                       01750000         
+ 00022C D7D6E2C9E3C9E5C5             181 PO       DC    C'POSITIVE'                                              01760027         
+ 000234 D5C5C7C1E3C9E5C5             182 NE       DC    C'NEGATIVE'                                              01770027         
+ 00023C E9C5D9D640404040             183 ZE       DC    C'ZERO    '                                              01780064         
+                                     184 *                                                                       01790025         
+ 000244 F0                           185 CCA      DC    C'0'              CARRIAGE CONTROL                       01800076         
+ 000245 40404040                     186          DC    4C' '             SPACES                                 01810076         
+ 000249 5C5C5C5C40D5E4D4             187 HEADER1  DC    C'**** NUMBER REPORT ****'                               01820019         
+ 000260 4040404040404040             188          DC    106C' '           SPACES                                 01830076         
+                                     189 *                                                                       01840076         
+ 0002CA F0                           190 CCC      DC    C'0'              CARRIAGE CONTROL                       01850076         
+ 0002CB 40404040                     191          DC    4C' '             SPACES                                 01860076         
+ 0002CF 5C5C5C5C40E3D6E3             192 HEADER2  DC    C'**** TOTALS ****'                                      01870076         
+ 0002DF 4040404040404040             193          DC    113C' '           SPACES                                 01880076         
+                                     194 *                                CURRENT ISSUE, CALCULATING COUNTS OF   01890078         
+ 000350 F0                           195 CCD      DC    C'0'              NEGATIVE,POSITIVE AND ZEROS            01900099         
+ 000351 404040404040                 196          DC    6C' '             SPACES                                 01910092         
+ 000357 D5E4D4C2C5D940D6             197          DC    C'NUMBER OF ZEROS:'                                      01920089         
+ 000367 404040                       198          DC    3C' '             SPACES                                 01930098         
+ 00036A 4040404040404040             199 ZEROS    DC    12C' '            TOTAL NUMBER OF ZEROS                  01940089         
+ 000376 4040404040404040             200          DC    94C' '            SPACES                                 01950098         
+                                     201 *                                CURRENT ISSUE, CALCULATING COUNTS OF   01960094         
+ 0003D4 40                           202 CCE      DC    C' '              NEGATIVE,POSITIVE AND ZEROS            01970094         
+ 0003D5 404040404040                 203          DC    6C' '             SPACES                                 01980094         
+ 0003DB D5E4D4C2C5D940D6             204          DC    C'NUMBER OF POSITIVE:'                                   01990094         
+ 0003EE 4040404040404040             205 POSTS    DC    12C' '            TOTAL NUMBER OF ZEROS                  02000094         
+ 0003FA 4040404040404040             206          DC    95C' '            SPACES                                 02010097         
+                                     207 *                                                                       02020078         
+ 000459 40                           208 CCF      DC    C' '              NEGATIVE,POSITIVE AND ZEROS            02030099         
+ 00045A 404040404040                 209          DC    6C' '             SPACES                                 02040099         
+ 000460 D5E4D4C2C5D940D6             210          DC    C'NUMBER OF NEGATIVE:'                                   02050099         
+ 000473 4040404040404040             211 NEGS     DC    12C' '            TOTAL NUMBER OF ZEROS                  02060099         
+ 00047F 4040404040404040             212          DC    95C' '            SPACES                                 02070099         
+                                     213 *                                                                       02080099         
+ 0004DE 40                           214 CCG      DC    C' '              CARRIAGE CONTROL                       02090099         
+ 0004DF 4040404040404040             215          DC    17C' '            SPACES                                 02100099         
+ 0004F0 C1E5C5D9C1C7C57A             216          DC    C'AVERAGE:'                                              02110099         
+ 0004F8 4040404040404040             217 AVG      DC    12C' '            AVERAGE VALUE                          02120099         
+ 000504 4040404040404040             218          DC    95C' '            SPACES                                 02130099         
+                                     219 *                                                                       02140099         
+ 000563 40                           220 CCH      DC    C' '              CARRIAGE CONTROL                       02150099         
+ 000564 4040404040404040             221          DC    17C' '            SPACES                                 02160099         
+ 000575 C8C9C7C8C5E2E37A             222          DC    C'HIGHEST:'                                              02170099         
+ 00057D 4040404040404040             223 HIGH     DC    12C' '            HIGHEST VALUE                          02180099         
+1                                                                                                               PAGE    5         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 000589 4040404040404040             224          DC    95C' '            SPACES                                 02190099         
+                                     225 *                                                                       02200099         
+ 0005E8 40                           226 CCI      DC    C' '              CARRIAGE CONTROL                       02210099         
+ 0005E9 4040404040404040             227          DC    17C' '            SPACES                                 02220099         
+ 0005FA D3D6E6C5E2E37A               228          DC    C'LOWEST:'                                               02230099         
+ 000601 40                           229          DC    C' '                                                     02240099         
+ 000602 4040404040404040             230 LOW      DC    12C' '            LOWEST VALUE                           02250099         
+ 00060E 4040404040404040             231          DC    95C' '            SPACES                                 02260099         
+                                     232 *                                                                       02270099         
+                                     233          END   ASSIGN7                                                  02280000         
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:   11660 HIGH:    1184 LEAVING:  480724 FREE BYTES. AVERAGE:       54 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.001 SECS,   234000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+0    **** NUMBER REPORT ****                                                                                                      
+0      NUMBER PROCESSED:         500 POSITIVE                                                                                     
+       NUMBER PROCESSED:          23 POSITIVE                                                                                     
+       NUMBER PROCESSED:         -45 NEGATIVE                                                                                     
+       NUMBER PROCESSED:           0 ZERO                                                                                         
+       NUMBER PROCESSED:           5 POSITIVE                                                                                     
+       NUMBER PROCESSED:          -1 NEGATIVE                                                                                     
+       NUMBER PROCESSED:         324 POSITIVE                                                                                     
+       NUMBER PROCESSED:       99999 POSITIVE                                                                                     
+       NUMBER PROCESSED:          41 POSITIVE                                                                                     
+       NUMBER PROCESSED:          17 POSITIVE                                                                                     
+       NUMBER PROCESSED:           0 ZERO                                                                                         
+       NUMBER PROCESSED:       -2280 NEGATIVE                                                                                     
+       NUMBER PROCESSED:         -47 NEGATIVE                                                                                     
+       NUMBER PROCESSED:         888 POSITIVE                                                                                     
+       NUMBER PROCESSED:         -35 NEGATIVE                                                                                     
+       NUMBER PROCESSED:           4 POSITIVE                                                                                     
+       NUMBER PROCESSED:         -99 NEGATIVE                                                                                     
+       NUMBER PROCESSED:           0 ZERO                                                                                         
+       NUMBER PROCESSED:         -66 NEGATIVE                                                                                     
+       NUMBER PROCESSED:         100 POSITIVE                                                                                     
+       NUMBER PROCESSED:         333 POSITIVE                                                                                     
+       NUMBER PROCESSED:          95 POSITIVE                                                                                     
+       NUMBER PROCESSED:         -59 NEGATIVE                                                                                     
+0    **** TOTALS ****                                                                                                             
+0      NUMBER OF ZEROS:              3                                                                                            
+       NUMBER OF POSITIVE:          12                                                                                            
+       NUMBER OF NEGATIVE:           8                                                                                            
+                  AVERAGE:        4334                                                                                            
+                  HIGHEST:       99999                                                                                            
+                  LOWEST:        -2280                                                                                            
+0*** EXECUTION TIME =    0.001 SECS.       567 INSTRUCTIONS EXECUTED -   567000 INSTRUCTIONS/SEC ***                              
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                

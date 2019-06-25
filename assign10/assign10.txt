@@ -1,0 +1,396 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 09.31.14 JOB00648 ---- WEDNESDAY, 13 DEC 2017 ----
+ 09.31.14 JOB00648  IRR010I  USERID KC03H99  IS ASSIGNED TO THIS JOB.
+ 09.31.14 JOB00648  ICH70001I KC03H99  LAST ACCESS AT 09:30:45 ON WEDNESDAY, DECEMBER 13, 2017
+ 09.31.14 JOB00648  $HASP373 KC03H99A STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 09.31.14 JOB00648  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 09.31.14 JOB00648  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 09.31.14 JOB00648  -KC03H99A                      00     59 ******    .00     .0    224   0      0      0      0     0
+ 09.31.14 JOB00648  -KC03H99A ENDED.  NAME-ANDREW SLADE         TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 09.31.14 JOB00648  $HASP395 KC03H99A ENDED
+0------ JES2 JOB STATISTICS ------
+-  13 DEC 2017 JOB EXECUTION DATE
+-          283 CARDS READ
+-          396 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           44 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03H99A JOB ,'ANDREW SLADE',MSGCLASS=H                               JOB00648
+         2 //JSTEP01 EXEC PGM=ASSIST                                               00020000
+         3 //STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        00030000
+         4 //SYSPRINT DD SYSOUT=*                                                  00040000
+         5 //FT05F001 DD DSN=KC02322.CSCI360.DATAFA17(DATA10),DISP=SHR             00050000
+         6 //SYSIN    DD *                                                         00060000
+ ICH70001I KC03H99  LAST ACCESS AT 09:30:45 ON WEDNESDAY, DECEMBER 13, 2017
+ IEF236I ALLOC. FOR KC03H99A JSTEP01
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME FT05F001
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I KC03H99A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03H99.KC03H99A.JOB00648.D0000102.?         SYSOUT        
+ IGD104I KC02322.CSCI360.DATAFA17                     RETAINED,  DDNAME=FT05F001
+ IEF285I   KC03H99.KC03H99A.JOB00648.D0000101.?         SYSIN         
+ IEF373I STEP/JSTEP01 /START 2017347.0931
+ IEF032I STEP/JSTEP01 /STOP  2017347.0931 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11432K
+         ATB- REAL:                    12K  SLOTS:                     0K
+              VIRT- ALLOC:       2M SHRD:       0M
+ IEF375I  JOB/KC03H99A/START 2017347.0931
+ IEF033I  JOB/KC03H99A/STOP  2017347.0931 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ***************************************************                     00070000         
+                                       2 * ASSIGNMENT 10- PACKED DECIMAL                   *                     00080000         
+                                       3 * ANDREW SLADE                                    *                     00090000         
+                                       4 * DATE DUE: 12/13/2017                            *                     00100000         
+                                       5 ***************************************************                     00110000         
+                                       6 *1 PRINT HEADER                                   *                     00140000         
+                                       7 *   *                                             *                     00150000         
+                                       8 *2 READ RECORD                                    *                     00160099         
+                                       9 *   *                                             *                     00170000         
+                                      10 *3 INCREMENT RECORD COUNT                         *                     00180099         
+                                      11 *   *                                             *                     00190000         
+                                      12 *4 ENTER SUBROUTINE                               *                     00200099         
+                                      13 *   *                                             *                     00210000         
+                                      14 *5 GET ALL INFORMATION                            *                     00220099         
+                                      15 *   *                                             *                     00230000         
+                                      16 *6 DO VARIOUS CALCULATIONS                        *                     00240099         
+                                      17 *   *                                             *                     00250000         
+                                      18 *7 FORMAT OUTPUT FOR EACH RECORD                  *                     00260099         
+                                      19 *   *                                             *                     00270000         
+                                      20 *8 CALCULATE RECORD COUNT AND FORMAT OUTPUT       *                     00280099         
+                                      21 *   *                                             *                     00290000         
+                                      22 *9 CALCULATE AVERGAGE VALUE AND FORMAT OUTPUT     *                     00300099         
+                                      23 *   *                                             *                     00310000         
+                                      24 *10 CALCULATE TOTAL  VALUE AND FORMAT OUTPUT      *                     00320099         
+                                      25 *   *                                             *                     00330000         
+                                      26 *11 PRINT REPORTS                                 *                     00340000         
+                                      27 *   *                                             *                     00350000         
+                                      28 *FUNCTION: READS RECORDS AND GETS VARIOUS METADATA*                     00360099         
+                                      29 *   * FOR EACH RECORD THAT DETAILS ACCOUNT INFO.  *                     00370099         
+                                      30 *   *                                             *                     00400000         
+                                      31 *INPUT: A DATAFILE FROM ANOTHER USER              *                     00410000         
+                                      32 *  *                                              *                     00420000         
+                                      33 *ENTRY CONDS: NONE                                *                     00430000         
+                                      34 *  *                                              *                     00440000         
+                                      35 *EXIT CONDS: NONE                                 *                     00450000         
+                                      36 *  *                                              *                     00460000         
+                                      37 *NOTES: NONE                                      *                     00470000         
+                                      38 *  *                                              *                     00480000         
+                                      39 *OUTPUT: A REPORT SHOWING META DATA FOR THE DATA  *                     00490000         
+                                      40 *  *     SET.                                     *                     00500000         
+                                      41 *  *                                              *                     00510000         
+                                      42 *REGISTER USAGE: R2: BUFFER                       *                     00530099         
+                                      43 *  *             R3: TOTAL BALANCE                *                     00540037         
+                                      44 *  *             R11: RECORD COUNT                *                     00620001         
+                                      45 *  *             R12: STD LINKAGE                 *                     00630000         
+                                      46 *  *             R13: STD LINKAGE                 *                     00640000         
+                                      47 *  *             R14: STD LINKAGE                 *                     00650000         
+                                      48 *  *             R15: STD LINKAGE                 *                     00660000         
+                                      49 ***************************************************                     00670000         
+ 000000                               50 ASSIGN10 CSECT                                                          00680000         
+                                      51 * STD LINKAGE                                                           00690000         
+ 000000 90EC D00C            0000C    52          STM   14,12,12(13)      STORE REGISTERS                        00700000         
+1                                                                                                               PAGE    2         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 000004 18CF                          53          LR    12,15             ADDRESS OF ASSIGN9                     00710000         
+ 000000                               54          USING ASSIGN10,12       ESTABLISH ADDRESSABILITY               00720003         
+ 000006 41E0 C0E8            000E8    55          LA    14,SAVER          POINT TO SAVE AREA                     00730000         
+ 00000A 50D0 E004            00004    56          ST    13,4(,14)         BACKWARD POINTR                        00740000         
+ 00000E 50E0 D008            00008    57          ST    14,8(,13)         FORWARD POINTER                        00750000         
+ 000012 18DE                          58          LR    13,14             POINT TO SAVE AREA                     00760000         
+                                      59 * END STD LINKAGE                                                       00770000         
+                                      60 *                                                                       00780000         
+ 000014 E020 C1A1 0085 001A1          61          XPRNT CCH0,133          PRINT OVERHEADER                       00790099         
+ 00001A E020 C2B0 0085 002B0          62          XPRNT CCH1,133          PRINT HEADER                           00800099         
+ 000020 E020 C226 0085 00226          63          XPRNT CCH5,133          PRINT DIVIDER                          00810099         
+ 000026 E000 C130 0050 00130          64          XREAD BUFFER,80         READ INTO BUFFER                       00820099         
+ 00002C 4740 C04A            0004A    65 READF    BL    ENDREADF          BRANCH WHEN DONE READING               00830000         
+                                      66 *                                                                       00840001         
+ 000030 FA10 C180 C0D8 00180 000D8    67          AP    COUNT(2),=PL1'1'  INCREMENT RECORD COUNT                 00850099         
+                                      68 *                                                                       00860001         
+ 000036 4110 C4D8            004D8    69          LA    1,PARMLIST        POINT TO PARAMETER LIST                00870001         
+ 00003A 58F0 C0D0            000D0    70          L     15,=V(PROCACCT)   LOAD ADDRESS OF SUBROUTINE             00880004         
+ 00003E 05EF                          71          BALR  14,15             BRANCH AND LINK TO SUBROUTINE          00890029         
+                                      72 *                                                                       00900001         
+ 000040 E000 C130 0050 00130          73          XREAD BUFFER,80         READ INTO BUFFER                       00910099         
+                                      74 *                                                                       00920099         
+ 000046 47F0 C02C            0002C    75          B     READF             LOOP BACK TO READF FOR ANY CODE        00930000         
+                                      76 *                                                                       00940001         
+ 00004A 4110 C488            00488    77 ENDREADF LA    1,RECCNT                                                 00951099         
+ 00004E D203 C488 C0D4 00488 000D4    78          MVC   RECCNT(4),=X'40202120'                                   00952099         
+ 000054 DE03 C488 C180 00488 00180    79          ED    RECCNT(4),COUNT   TRANSFER RECORD COUNT                  00960099         
+ 00005A E020 C444 0085 00444          80          XPRNT CCH2,133          PRINT RECORD COUNT                     00970099         
+                                      81 * AVERAGE BALANCE                                                       00980099         
+ 000060 F085 C18F 0003 0018F 00003    82          SRP   SUMBAL(9),3,5       MULT BY 10000                        00990099         
+ 000066 F888 C198 C18F 00198 0018F    83          ZAP   AVGBAL(9),SUMBAL(9) PUT SUM INTO CALC AREA               01000099         
+ 00006C FD81 C198 C180 00198 00180    84          DP    AVGBAL(9),COUNT(2)  DIVIDE TOTAL                         01010099         
+ 000072 4110 C37C            0037C    85          LA    1,AVG+9             MARK DOLLAR SIGN PLACE               01020099         
+ 000076 D20E C373 C0D9 00373 000D9    86          MVC   AVG(15),=X'404020206B2020206B2020204B2020'               01030099         
+ 00007C DF0E C373 C198 00373 00198    87          EDMK  AVG(15),AVGBAL      MOVE AND MARK                        01040099         
+ 000082 0610                          88          BCTR  1,0                 GET READY FOR DOLLAR SIGN            01050099         
+ 000084 925B 1000      00000          89          MVI   0(1),C'$'           DOLLAR SIGN                          01060099         
+                                      90 * TOTAL BALANCE                                                         01070099         
+ 000088 F085 C18F 0003 0018F 00003    91          SRP   SUMBAL(9),3,5     PRINT SECOND HEADER                    01080099         
+ 00008E 4110 C404            00404    92          LA    1,TOTAL+12        MAKE SURE ZEROS ARE OKAY               01090099         
+ 000092 D20F C3F8 C0C0 003F8 000C0    93          MVC   TOTAL(16),=X'40402020206B2020206B2021204B2020'           01100099         
+ 000098 DF0F C3F8 C18F 003F8 0018F    94          EDMK  TOTAL(16),SUMBAL  MOVE AND MARK                          01110099         
+ 00009E 0610                          95          BCTR  1,0                DECREMENT TO DOLLAR SIGN AREA         01120099         
+ 0000A0 925B 1000      00000          96          MVI   0(1),C'$'          MOVE DOLLAR SIGN                      01130099         
+ 0000A4 E020 C3BE 0085 003BE          97          XPRNT CCH3,133           PRINT TOTAL                           01140099         
+ 0000AA E020 C338 0085 00338          98          XPRNT CCH4,133           PRINT AVERAGE                         01150099         
+                                      99 *                                                                       01160000         
+                                     100 * STD LINKAGE                                                           01170000         
+ 0000B0 58D0 D004            00004   101          L     13,4(,13)         LOAD SAVE AREA                         01180007         
+ 0000B4 98EC D00C            0000C   102          LM    14,12,12(13)      LOAD ALL REGISTERS BACK                01190000         
+ 0000B8 07FE                         103          BR    14                BREAK TO OS                            01200000         
+                                     104 * END STD LINKAGE                                                       01210000         
+                                     105          LTORG                                                          01220000         
+ 0000C0 40402020206B2020             106                =X'40402020206B2020206B2021204B2020'                                      
+ 0000D0 000004E0                     107                =V(PROCACCT)                                                              
+ 0000D4 40202120                     108                =X'40202120'                                                              
+ 0000D8 1C                           109                =PL1'1'                                                                   
+1                                                                                                               PAGE    3         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 0000D9 404020206B202020             110                =X'404020206B2020206B2020204B2020'                                        
+ 0000E8                              111 SAVER    DS    18F               SAVE AREA FOR REGISTERS                01230099         
+ 000130 4040404040404040             112 BUFFER   DC    80C' '            BUFFER FOR READING                     01240099         
+ 000180 000C                         113 COUNT    DC    PL2'0'            RECORD COUNT                           01250099         
+ 000182 6C40404040404040             114 NUMOUT   DC    CL13'%'           CHARACTER ACTBAL                       01260081         
+ 00018F 0000000000000000             115 SUMBAL   DC    PL9'0'            SUM OF ALL BALANCE                     01270099         
+ 000198 0000000000000000             116 AVGBAL   DC    PL9'0'            AVERAGE BALANCE                        01280099         
+                                     117 *                                                                       01290018         
+                                     118 *****                                                                   01300099         
+ 0001A1 F1                           119 CCH0     DC    C'1'              HEADER                                 01310099         
+ 0001A2 4040404040404040             120          DC    51C' '                                                   01320099         
+ 0001D5 C1C3C3D6E4D5E340             121          DC    C'ACCOUNT BALANCES DAILY REPORT'                         01330099         
+ 0001F2 4040404040404040             122          DC    52C' '                                                   01340099         
+                                     123 *****                                                                   01350099         
+ 000226 F0                           124 CCH5     DC    C'0'              CARRIAGE CONTROL                       01360099         
+ 000227 40                           125          DC    C' '                                                     01370099         
+ 000228 6060606060606060             126          DC    C'----------------------'                                01380099         
+ 00023E 404040404040                 127          DC     6C' '                                                   01390099         
+ 000244 6060606060606060             128          DC    C'----------------' ORIGINAL BALANCE                     01400099         
+ 000254 404040                       129          DC    3C' '                                                    01410099         
+ 000257 6060606060606060             130          DC    C'---------------'  INTEREST AMOUNT                      01420099         
+ 000266 404040                       131          DC    3C' '                                                    01430099         
+ 000269 6060606060606060             132          DC    C'----------'     FEES                                   01440099         
+ 000273 404040                       133          DC    3C' '                                                    01450099         
+ 000276 6060606060606060             134          DC    C'-------------'  FINAL BALANCE                          01460099         
+ 000283 4040404040404040             135          DC    45C' '                                                   01470099         
+                                     136 *****                                                                   01480099         
+ 0002B0 F0                           137 CCH1     DC    C'0'              CARRIAGE CONTROL                       01490099         
+ 0002B1 40                           138          DC    C' '                                                     01500099         
+ 0002B2 D5C1D4C5                     139 NAME     DC    C'NAME'           ACCOUNT NAME                           01510099         
+ 0002B6 4040404040404040             140          DC    24C' '                                                   01520099         
+ 0002CE C1C3C3D6E4D5E340             141 ORIG     DC    C'ACCOUNT BALANCE'  ORIGINAL BALANCE                     01530099         
+ 0002DD 404040                       142          DC    3C' '                                                    01540099         
+ 0002E0 C9D5E3C5D9C5E2E3             143 INTEREST DC    C'INTEREST AMOUNT'  INTEREST AMOUNT                      01550099         
+ 0002EF 40404040404040               144          DC    7C' '                                                    01560099         
+ 0002F6 C6C5C5                       145 FEES     DC    C'FEE'            FEES                                   01570099         
+ 0002F9 4040404040                   146          DC    5C' '                                                    01580099         
+ 0002FE D5C5E640C1C3C3D6             147 OBALANCE DC    C'NEW ACCOUNT BALANCE'  BALANCE                          01590099         
+ 000311 4040404040404040             148          DC    39C' '                                                   01600099         
+                                     149 *****                                                                   01610099         
+ 000338 40                           150 CCH4     DC    C' '           HEADER 4                                  01620099         
+ 000339 4040404040404040             151          DC    28C' '                                                   01630099         
+ 000355 C1E5C5D9C1C7C540             152          DC    C'AVERAGE AMOUNT:'                                       01640099         
+ 000364 4040404040404040             153          DC    15C' '                                                   01650099         
+ 000373 4040404040404040             154 AVG      DC    15C' '                                                   01660099         
+ 000382 4040404040404040             155          DC    60C' '                                                   01670099         
+                                     156 *****                                                                   01680099         
+ 0003BE 40                           157 CCH3     DC    C' '           HEADER 2                                  01690099         
+ 0003BF 4040404040404040             158          DC    28C' '                                                   01700099         
+ 0003DB D5C5E640C2C1D3C1             159          DC    C'NEW BALANCE SUM:'                                      01710099         
+ 0003EB 4040404040404040             160          DC    13C' '                                                   01720099         
+ 0003F8 4040404040404040             161 TOTAL    DC    16C' '         SUM OF ALL VALUES                         01730099         
+ 000408 4040404040404040             162          DC    60C' '                                                   01740099         
+                                     163 *****                                                                   01750099         
+ 000444 F0                           164 CCH2     DC    C'0'              HEADER 3                               01760099         
+ 000445 4040404040404040             165          DC    28C' '                                                   01770099         
+ 000461 D5E4D4C2C5D940D6             166          DC    C'NUMBER OF ACCOUNTS:'                                   01780099         
+1                                                                                                               PAGE    4         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 000474 4040404040404040             167          DC    20C' '                                                   01790099         
+ 000488 40404040                     168 RECCNT   DC    4C' '           RECORD COUNT                             01800099         
+ 00048C 4040404040404040             169          DC    62C' '                                                   01810099         
+                                     170 *****                                                                   01820099         
+ 0004CA                              171 ACTBAL   DS    CL13              ACCOUNT AMOUNT                         01830018         
+                                     172 *                                                                       01840018         
+ 0004D8 00000130                     173 PARMLIST DC    A(BUFFER)         PARAMETER LIST                         01850001         
+ 0004DC 0000018F                     174          DC    A(SUMBAL)         PARM LIST                              01860099         
+                                     175 *                                                                       01870001         
+                                     176 * EXTERNAL SUBROUTINE                                                   01880000         
+ 0004E0                              177 PROCACCT CSECT                                                          01890001         
+                                     178 * STD LINKAGE                                                           01900000         
+ 0004E0 90EC D00C            0000C   179          STM   14,12,12(13)      SAVE ALL REGS                          01910000         
+ 0004E4 18CF                         180          LR    12,15             ADDRESS OF PROCNUM                     01920000         
+ 0004E0                              181          USING PROCACCT,12       ADDRESSABILITY                         01930003         
+ 0004E6 41E0 C164            00644   182          LA    14,SAVEAR         STORAGE POINTER                        01940000         
+ 0004EA 50D0 E004            00004   183          ST    13,4(,14)         BACKWARD POINTER                       01950000         
+ 0004EE 50E0 D008            00008   184          ST    14,8(,13)         FORWARD POINTER                        01960000         
+ 0004F2 18DE                         185          LR    13,14             POINT TO SAVE AREA                     01970000         
+                                     186 * END STD LINKAGE                                                       01980000         
+ 0004F4 9823 1000            00000   187          LM    2,3,0(1)          R2 <-  BUFFER                          01990009         
+                                     188 *                                R3 <-  SUMBAL(SUM OF BALANCE)          02000099         
+                                     189 *                                                                       02010009         
+ 0004F8 F888 C24D C134 0072D 00614   190          ZAP   FINBAL(9),=PL9'0'  CLEAR OUT FINAL BALANCE               02020099         
+ 0004FE D218 C1AE 2000 0068E 00000   191          MVC   ACTNAME(25),0(2)   COPY NAME INTO OUTPUT FIELD           02030099         
+                                     192 * NAME SAVED                                                            02040099         
+ 000504 F248 C235 2019 00715 00019   193          PACK  PACTBAL(5),25(9,2) PACK ACCOUNT BALANCE                  02050099         
+                                     194 *                                                                       02060099         
+ 00050A 4110 C1D4            006B4   195          LA    1,OUTOBAL+10        MAKE SURE ZEROS ARE OKAY             02070099         
+ 00050E D20D C1CA C120 006AA 00600   196          MVC   OUTOBAL(14),=X'4040206B2020206B2021204B2020'             02080099         
+ 000514 DF0D C1CA C235 006AA 00715   197          EDMK  OUTOBAL(14),PACTBAL MOVE AND MARK                        02090099         
+ 00051A 0610                         198          BCTR  1,0                DECREMENT TO DOLLAR SIGN AREA         02100099         
+ 00051C 925B 1000      00000         199          MVI   0(1),C'$'          MOVE DOLLAR SIGN                      02110099         
+                                     200 *                                                                       02120099         
+ 000520 F940 C235 C13D 00715 0061D   201          CP    PACTBAL(5),=PL1'0'       COMPARE ACCOUNT BALANCE WITH 0  02130099         
+ 000526 47B0 C066            00546   202          BNL   POSBAL                   BRANCH TO POSITIVE BALANCE CALC 02140099         
+ 00052A D200 C231 C13E 00711 0061E   203          MVC   FLAGF(1),=C'Y'           IS NEGATIVE                     02150099         
+ 000530 0610                         204          BCTR  1,0                      MARK AREA FOR NEGATIVE SIGN     02160099         
+ 000532 9260 1000      00000         205          MVI   0(1),C'-'                IS NEGATIVE                     02170099         
+ 000536 F822 C232 C13F 00712 0061F   206          ZAP   PFEE(3),=PL3'-35.00'     FEE FOR NEGATIVE BALANCE:35     02180099         
+ 00053C F870 C23D C13D 0071D 0061D   207          ZAP   PCINT(8),=PL1'0'         INTRATE IS ZERO ON NEGATIVE BAL 02190099         
+ 000542 47F0 C08A            0056A   208          B     PASTPOS                  BRANCH PAST POSITIVE STATEMENT  02200099         
+                                     209 *                                                                       02210021         
+ 000546 F820 C232 C13D 00712 0061D   210 POSBAL   ZAP   PFEE(3),=PL1'0'     NO FEE ON A POSITIVE BALANCE         02220099         
+ 00054C D200 C231 C142 00711 00622   211          MVC   FLAGF(1),=C'N'      IS NOT NEGATIVE                      02230099         
+ 000552 F223 C23A 2022 0071A 00022   212          PACK  PINRATE(3),34(4,2)  PACK INTEREST RATE                   02240099         
+ 000558 F874 C23D C235 0071D 00715   213          ZAP   PCINT(8),PACTBAL(5) ADD ACT BAL TO CALC AREA             02250099         
+ 00055E FC72 C23D C23A 0071D 0071A   214          MP    PCINT(8),PINRATE(3) MULTIPLY ACT BAL BY INTEREST         02260099         
+ 000564 F075 C23D 003C 0071D 0003C   215          SRP   PCINT(8),64-4,5     MULTIPLY BY 100 ROUND OFF            02270099         
+                                     216 *                                                                       02280099         
+                                     217 * NOW FOR THE FINAL BALANCE                                             02290099         
+ 00056A F884 C24D C235 0072D 00715   218 PASTPOS  ZAP   FINBAL(9),PACTBAL(5) ADD ACCOUNT BALANCE                 02300099         
+ 000570 FA87 C24D C23D 0072D 0071D   219          AP    FINBAL(9),PCINT(8)   ADD INTEREST                        02310099         
+ 000576 FA82 C24D C232 0072D 00712   220          AP    FINBAL(9),PFEE(3)    ADD FEES                            02320099         
+ 00057C FA88 3000 C24D 00000 0072D   221          AP    0(9,3),FINBAL(9)     ADD TO TOTAL                        02330099         
+ 000582 F085 C24D 0007 0072D 00007   222          SRP   FINBAL(9),7,5       ROUND FOR PRINTING                   02340099         
+ 000588 4110 C206            006E6   223          LA    1,BALANCE+11        MAKE SURE ZEROS ARE OKAY             02350099         
+1                                                                                                               PAGE    5         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 00058C D20E C1FB C143 006DB 00623   224          MVC   BALANCE(15),=X'404020206B2020206B2021204B2020'           02360099         
+ 000592 DF0E C1FB C24D 006DB 0072D   225          EDMK  BALANCE(15),FINBAL  MOVE AND MARK                        02370099         
+                                     226 *                                                                       02380099         
+ 000598 0610                         227          BCTR  1,0                DECREMENT TO DOLLAR SIGN AREA         02390099         
+ 00059A 925B 1000      00000         228          MVI   0(1),C'$'          MOVE DOLLAR SIGN                      02400099         
+ 00059E 95E8 C231      00711         229          CLI   FLAGF,C'Y'         CHECK FOR NEGATIVE                    02410099         
+ 0005A2 4740 C0D0            005B0   230          BL    FINISH             IF NOT NEGATIVE BRANCH                02420099         
+ 0005A6 0610                         231          BCTR  1,0                MARK NEGATIVE AREA                    02430099         
+ 0005A8 9260 1000      00000         232          MVI   0(1),C'-'          PUSH SIGN                             02440099         
+ 0005AC 47F0 C0D0            005B0   233          B     FINISH             BRANCH TO END                         02450099         
+                                     234 * PRINT FEE AMOUNT                                                      02460099         
+ 0005B0 F025 C232 0001 00712 00001   235 FINISH   SRP   PFEE(3),1,5         ROUND UP FEES FOR PRINTING           02470099         
+ 0005B6 4110 C1F2            006D2   236          LA    1,FEEAMT+2          MARK SIG FIG                         02480099         
+ 0005BA D205 C1F0 C12E 006D0 0060E   237          MVC   FEEAMT(6),=X'4021204B2020'                               02490099         
+ 0005C0 DF05 C1F0 C232 006D0 00712   238          EDMK  FEEAMT(6),PFEE      PUSH FEE INTO PRINTLINE              02500099         
+ 0005C6 0610                         239          BCTR  1,0                 MARK DOLLAR SIGN AREA                02510099         
+ 0005C8 925B 1000      00000         240          MVI   0(1),C'$'           MOVE DOLLAR SIGN                     02520099         
+                                     241 * PRINT INTEREST AMOUNT                                                 02530099         
+ 0005CC F075 C23D 0006 0071D 00006   242          SRP   PCINT(8),6,5        ROUND UP INTEREST FOR PRINTING       02540099         
+ 0005D2 4110 C1E7            006C7   243          LA    1,OINTAMT+10        MAKE SURE ZEROS ARE OKAY             02550099         
+ 0005D6 D20D C1DD C152 006BD 00632   244          MVC   OINTAMT(14),=X'4040206B2020206B2021204B202020'           02560099         
+ 0005DC DF0D C1DD C23D 006BD 0071D   245          EDMK  OINTAMT(14),PCINT   MOVE AND MARK                        02570099         
+ 0005E2 0610                         246          BCTR  1,0                 MARK DOLLAR SIGN AREA                02580099         
+ 0005E4 925B 1000      00000         247          MVI   0(1),C'$'           MOVE DOLLAR SIGN                     02590099         
+ 0005E8 E020 C1AC 0085 0068C         248 ENDPOS   XPRNT CC,133              PRINT INFO LINE                      02600099         
+                                     249 *                                                                       02610021         
+                                     250 *                                                                       02620009         
+                                     251 * STD LINKAGE                                                           02630000         
+ 0005EE 58D0 D004            00004   252          L     13,4(,13)         ADDRESS OF CALL ROUTINE                02640000         
+ 0005F2 58E0 D00C            0000C   253          L     14,12(,13)        RESTORE CALLER REGISTER                02650000         
+ 0005F6 980C D014            00014   254          LM    0,12,20(13)       RESTORES CALLERS REGISTERS             02660000         
+ 0005FA 07FE                         255          BR    14                GO BACK TO CALLER ROUTINE              02670000         
+                                     256 * END STD LINKAGE                                                       02680000         
+                                     257          LTORG                                                          02690000         
+ 000600 4040206B2020206B             258                =X'4040206B2020206B2021204B2020'                                          
+ 00060E 4021204B2020                 259                =X'4021204B2020'                                                          
+ 000614 0000000000000000             260                =PL9'0'                                                                   
+ 00061D 0C                           261                =PL1'0'                                                                   
+ 00061E E8                           262                =C'Y'                                                                     
+ 00061F 03500D                       263                =PL3'-35.00'                                                              
+ 000622 D5                           264                =C'N'                                                                     
+ 000623 404020206B202020             265                =X'404020206B2020206B2021204B2020'                                        
+ 000632 4040206B2020206B             266                =X'4040206B2020206B2021204B202020'                                        
+ 000644                              267 SAVEAR   DS    18F               SAVE AREA FOR REGISTERS                02700099         
+                                     268 *                                                                       02710099         
+ 00068C F0                           269 CC       DC    C'0'              CARRIAGE CONTROL                       02720099         
+ 00068D 40                           270          DC    C' '                                                     02730099         
+ 00068E                              271 ACTNAME  DS    CL25              ACCOUNT NAME                           02740099         
+ 0006A7 404040                       272          DC    3C' '                                                    02750099         
+ 0006AA                              273 OUTOBAL  DS    CL14              ORIGINAL BALANCE                       02760099         
+ 0006B8 4040404040                   274          DC    5C' '                                                    02770099         
+ 0006BD                              275 OINTAMT  DS    CL14              INTEREST AMOUNT                        02780099         
+ 0006CB 4040404040                   276          DC    5C' '                                                    02790099         
+ 0006D0                              277 FEEAMT   DS    CL6               FEES                                   02800099         
+ 0006D6 4040404040                   278          DC    5C' '                                                    02810099         
+ 0006DB                              279 BALANCE  DS    CL15              FINAL BALANCE                          02820099         
+ 0006EA 4040404040404040             280          DC    39C' '                                                   02830099         
+1                                                                                                               PAGE    6         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                     281 *                                                                       02840099         
+ 000711 40                           282 FLAGF    DC    C' '              FLAG FOR NEGATIVE                      02850099         
+ 000712 00000C                       283 PFEE     DC    PL3'0'            FEE AMOUNT                             02860099         
+ 000715 000000000C                   284 PACTBAL  DC    PL5'0'            ACCOUNT BALANCE                        02870099         
+ 00071A 00000C                       285 PINRATE  DC    PL3'0'            INTEREST RATE                          02880099         
+ 00071D 000000000000000C             286 PCINT    DC    PL8'0'            CALC INTEREST                          02890099         
+ 000725 000000000000000C             287 PINAMT   DC    PL8'0'            FINAL INTEREST RATE                    02900099         
+ 00072D 0000000000000000             288 FINBAL   DC    PL9'0'                                                   02910099         
+                                     289 *                                                                       02920000         
+                                     290          END   ASSIGN10                                                 02930000         
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:   15400 HIGH:    1656 LEAVING:  476512 FREE BYTES. AVERAGE:       58 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.001 SECS,   291000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+1                                                   ACCOUNT BALANCES DAILY REPORT                                                 
+0 NAME                        ACCOUNT BALANCE   INTEREST AMOUNT       FEE     NEW ACCOUNT BALANCE                                 
+0 ----------------------      ----------------   ---------------   ----------   -------------                                     
+0 SMETANA, B.                 -$1,010,230.09              $0.00     $35.00      -$1,010,265.09                                    
+0 DVORAK, A.                   $9,290,280.00      $1,230,962.10      $0.00      $10,521,242.10                                    
+0 REVUELTAS, S.                   $42,330.02          $3,979.02      $0.00          $46,309.04                                    
+0 TSCHAIKOWSKY, P.             $1,323,290.01        $138,283.81      $0.00       $1,461,573.82                                    
+0 BRAHMS, J.                       $3,230.01            $229.33      $0.00           $3,459.34                                    
+0 MOZART, W. A.                  -$29,329.93              $0.00     $35.00         -$29,364.93                                    
+0 BACH, J. S.                      $3,210.23             $62.60      $0.00           $3,272.83                                    
+0 BARBER, S.                         $550.00             $23.10      $0.00             $573.10                                    
+0 JOCHUM, E.                     $456,830.12        $107,126.66      $0.00         $563,956.78                                    
+0 WAND, G.                        $34,290.22          $1,028.71      $0.00          $35,318.93                                    
+0 FRICSAY, F.                      $2,110.01             $21.10      $0.00           $2,131.11                                    
+0 BERNSTEIN, L.                  $223,239.93         $22,212.37      $0.00         $245,452.30                                    
+0 KARAJAN, H. VON              $9,988,722.21      $2,921,701.25      $0.00      $12,910,423.46                                    
+0 KUBELIK, R.                     $32,330.22          $2,942.05      $0.00          $35,272.27                                    
+0 BRUCKNER, A.                    $23,230.01            $313.61      $0.00          $23,543.62                                    
+0 PUCCINI, G.                   -$675,840.01              $0.00     $35.00        -$675,875.01                                    
+0 RACHMANINOV, S.             -$3,343,290.12              $0.00     $35.00      -$3,343,325.12                                    
+0 MENDELSSOHN, J. L. F.           $43,430.42          $2,410.39      $0.00          $45,840.81                                    
+0 MENDELSSOHN, F. C.             $100,320.42          $6,019.23      $0.00         $106,339.65                                    
+0 STANFORD, C. V.              $9,932,998.83        $203,626.48      $0.00      $10,136,625.31                                    
+0 ELGAR, E.                       $23,990.19          $4,558.14      $0.00          $28,548.33                                    
+0 DEBUSSY, C.                      $2,980.01             $90.89      $0.00           $3,070.90                                    
+0 RAVEL, M.                      $323,290.11         $16,649.44      $0.00         $339,939.55                                    
+0 PARRY, H.                       $23,450.05          $1,219.40      $0.00          $24,669.45                                    
+0 STRAUSS, R.                  $3,239,892.34         $64,797.85      $0.00       $3,304,690.19                                    
+0 WOLF, H.                        -$3,230.04              $0.00     $35.00          -$3,265.04                                    
+0 SCHUBERT, F.                    $23,330.21            $244.97      $0.00          $23,575.18                                    
+0 HANDEL, G.                     $543,283.21         $57,316.38      $0.00         $600,599.59                                    
+0 SOLTI, G.                     -$987,437.88              $0.00     $35.00        -$987,472.88                                    
+1 MONTEVERDI, C.               $3,232,801.11        $969,840.33      $0.00       $4,202,641.44                                    
+0 STRAUSS, JR., J.                    $10.00              $0.00      $0.00              $10.00                                    
+0 VERDI, G.                    $3,239,971.20        $404,996.40      $0.00       $3,644,967.60                                    
+0 ROSSINI, G.                     $23,450.05          $1,219.40      $0.00          $24,669.45                                    
+0 STRAUSS, J.                     $23,990.19         $14,154.21      $0.00          $38,144.40                                    
+0 BYRD, W.                        $23,230.01            $313.61      $0.00          $23,543.62                                    
+0 STRAUSS, E.                      $2,980.01             $90.89      $0.00           $3,070.90                                    
+0                            NUMBER OF ACCOUNTS:                      36                                                          
+                             NEW BALANCE SUM:               $42,353,907.00                                                        
+                             AVERAGE AMOUNT:                 $1,176,497.41                                                        
+0*** EXECUTION TIME =    0.002 SECS.      2176 INSTRUCTIONS EXECUTED -  1088000 INSTRUCTIONS/SEC ***                              
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                

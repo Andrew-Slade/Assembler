@@ -1,0 +1,22 @@
+
+        JOAN TOWER                         12345             15             80             25            500           1675         
+
+        WOLFGANG AMADEUS MOZART            23456             19             80              0             10           1530         
+
+        RICHARD STRAUSS                    22132             10             80             31            200            969         
+
+        AMY BEACH                          65465             22             80             15            900           2645         
+
+        DAME ETHEL SMYTHE                  44560             23             28             34             70            680         
+
+        PETER ILYICH TCHAIKOVSKY           99870             22             80             21              0           1739         
+
+        ANTON BRUCKNER                     14966             20             78              0            210           1770         
+
+        TOTAL EMPLOYEE COUNT:           7                                                                                           
+
+               TOTAL BONUSES:        1890                                                                                           
+
+             TOTAL GROSS PAY:       11008                                                                                           
+
+           AVERAGE GROSS PAY:        1572

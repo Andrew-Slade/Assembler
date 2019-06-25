@@ -1,0 +1,87 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 17.54.24 JOB04618 ---- WEDNESDAY, 20 SEP 2017 ----
+ 17.54.24 JOB04618  IRR010I  USERID KC03H99  IS ASSIGNED TO THIS JOB.
+ 17.54.24 JOB04618  ICH70001I KC03H99  LAST ACCESS AT 17:53:48 ON WEDNESDAY, SEPTEMBER 20, 2017
+ 17.54.24 JOB04618  $HASP373 KC03H99A STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 17.54.25 JOB04618  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 17.54.25 JOB04618  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 17.54.25 JOB04618  -KC03H99A                      00     37 ******    .00     .0     78   0      0      0      0     0
+ 17.54.25 JOB04618  -KC03H99A ENDED.  NAME-ANDREW SLADE         TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 17.54.25 JOB04618  $HASP395 KC03H99A ENDED
+0------ JES2 JOB STATISTICS ------
+-  20 SEP 2017 JOB EXECUTION DATE
+-           37 CARDS READ
+-           87 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-            8 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03H99A JOB ,'ANDREW SLADE',MSGCLASS=H                               JOB04618
+         2 //JSTEP01 EXEC PGM=ASSIST                                               00020004
+         3 //STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        00030004
+         4 //SYSPRINT DD SYSOUT=*                                                  00040004
+         5 //SYSIN    DD *                                                         00050004
+ ICH70001I KC03H99  LAST ACCESS AT 17:53:48 ON WEDNESDAY, SEPTEMBER 20, 2017
+ IEF236I ALLOC. FOR KC03H99A JSTEP01
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I KC03H99A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03H99.KC03H99A.JOB04618.D0000102.?         SYSOUT        
+ IEF285I   KC03H99.KC03H99A.JOB04618.D0000101.?         SYSIN         
+ IEF373I STEP/JSTEP01 /START 2017263.1754
+ IEF032I STEP/JSTEP01 /STOP  2017263.1754 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11524K
+         ATB- REAL:                    12K  SLOTS:                     0K
+              VIRT- ALLOC:       2M SHRD:       0M
+ IEF375I  JOB/KC03H99A/START 2017263.1754
+ IEF033I  JOB/KC03H99A/STOP  2017263.1754 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ***************************************************                     00060004         
+                                       2 * ASSIGNMENT 3 - BASIC ASSEMBLY PROGRAM           *                     00070004         
+                                       3 *                                                 *                     00080004         
+                                       4 * DATE DUE: 09/15/2017                            *                     00090013         
+                                       5 ***************************************************                     00100013         
+                                       6 *PROCEDURE                                        *                     00110016         
+                                       7 *   *                                             *                     00120013         
+                                       8 *1  LOAD 15 INTO REGISTER 2                       *                     00121013         
+                                       9 *2  LOAD 7  INTO REGISTER 3                       *                     00122013         
+                                      10 *3  SUBTRACT REGISTER 3 FROM R2                   *                     00123013         
+                                      11 *4  DUMP REGISTERS                                *                     00124013         
+                                      12 *5  DEFINE NUM1 AS A FULLWORD OF 15               *                     00126014         
+                                      13 *6  DEFINE NUM2 AS A FULLWORD OF 7                *                     00127014         
+                                      14 *7  BREAK TO OS                                   *                     00128014         
+                                      15 ***************************************************                     00130004         
+ 000000                               16 ASSIGN3A CSECT                                                          00140012         
+                                      17 *                                                                       00141016         
+ 000000                               18          USING ASSIGN3A,15      ESTABLISH ADDRESSABILITY                00150012         
+                                      19 *                                                                       00160016         
+ 000000 5820 F018            00018    20          L     2,NUM1           LOAD R2 WITH 15                         00180018         
+ 000004 5830 F01C            0001C    21          L     3,NUM2           LOAD R3 WITH 7                          00190018         
+ 000008 1B23                          22          SR    2,3              SUBTRACT R3 FROM R2                     00200011         
+ 00000A E160 0000 0000 00000          23          XDUMP                                                          00210020         
+                                      24 *                                                                       00211016         
+ 000010 07FE                          25          BR    14               RETURN TO CALLER                        00220011         
+                                      26 *                                                                       00221014         
+                                      27          LTORG                                                          00222015         
+ 000018 0000000F                      28 NUM1     DC    F'15'            DEFINE FULLWORD OF 15                   00230011         
+ 00001C 00000007                      29 NUM2     DC    F'7'             DEFINE FULLWORD OF 7                    00240011         
+                                      30 *                                                                       00241016         
+                                      31          END   ASSIGN3A                                                 00250012         
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:     896 HIGH:     380 LEAVING:  492292 FREE BYTES. AVERAGE:       39 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.000 SECS,    32000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+0BEGIN XSNAP - CALL     1 AT E0000010 USER REGISTERS                                                                              
+0 REGS 0-7      F4F4F4F4    F4F4F4F4    00000008    00000007    F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4                      
+  REGS 8-15     F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    F4F4F4F4    00000020    FFFE7960    00000000                      
+0                                                                                                                                 
+0*** EXECUTION TIME =    0.000 SECS.         5 INSTRUCTIONS EXECUTED -     5000 INSTRUCTIONS/SEC ***                              
+0*** FIRST CARD NOT READ: NO CARDS READ:FILE UNOPENED                                                                             
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                

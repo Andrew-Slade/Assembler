@@ -1,0 +1,161 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 19.04.37 JOB01027 ---- FRIDAY,    29 SEP 2017 ----
+ 19.04.37 JOB01027  IRR010I  USERID KC03H99  IS ASSIGNED TO THIS JOB.
+ 19.04.37 JOB01027  ICH70001I KC03H99  LAST ACCESS AT 19:04:16 ON FRIDAY, SEPTEMBER 29, 2017
+ 19.04.37 JOB01027  $HASP373 KC03H99A STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 19.04.37 JOB01027  IEC130I FT05F001 DD STATEMENT MISSING
+ 19.04.37 JOB01027  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 19.04.37 JOB01027  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 19.04.37 JOB01027  -KC03H99A                      00     39 ******    .00     .0    115   0      0      0      0     0
+ 19.04.37 JOB01027  -KC03H99A ENDED.  NAME-ANDREW SLADE         TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 19.04.37 JOB01027  $HASP395 KC03H99A ENDED
+0------ JES2 JOB STATISTICS ------
+-  29 SEP 2017 JOB EXECUTION DATE
+-          110 CARDS READ
+-          161 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           16 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03H99A JOB ,'ANDREW SLADE',MSGCLASS=H                               JOB01027
+         2 //JSTEP01 EXEC PGM=ASSIST                                               00020000
+         3 //STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        00030000
+         4 //SYSPRINT DD SYSOUT=*                                                  00040000
+         5 //SYSIN    DD *                                                         00050000
+ ICH70001I KC03H99  LAST ACCESS AT 19:04:16 ON FRIDAY, SEPTEMBER 29, 2017
+ IEF236I ALLOC. FOR KC03H99A JSTEP01
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEC130I FT05F001 DD STATEMENT MISSING
+ IEF142I KC03H99A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03H99.KC03H99A.JOB01027.D0000102.?         SYSOUT        
+ IEF285I   KC03H99.KC03H99A.JOB01027.D0000101.?         SYSIN         
+ IEF373I STEP/JSTEP01 /START 2017272.1904
+ IEF032I STEP/JSTEP01 /STOP  2017272.1904 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    11460K
+         ATB- REAL:                    12K  SLOTS:                     0K
+              VIRT- ALLOC:       2M SHRD:       0M
+ IEF375I  JOB/KC03H99A/START 2017272.1904
+ IEF033I  JOB/KC03H99A/STOP  2017272.1904 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ***************************************************                     00060000         
+                                       2 * ASSIGNMENT 3 - BASIC ASSEMBLY PROGRAM           *                     00070000         
+                                       3 * ANDREW SLADE                                    *                     00080001         
+                                       4 * DATE DUE: 09/29/2017                            *                     00090001         
+                                       5 ***************************************************                     00100000         
+                                       6 *PROCEDURE                                        *                     00110000         
+                                       7 *   *                                             *                     00120000         
+                                       8 *1 CLEAR OUT RECORDS                              *                     00121091         
+                                       9 *2 READ RECORDS INTO BUFFER                       *                     00122091         
+                                      10 *3 CONVERT RECORDSINTO DECIMAL FORM               *                     00123091         
+                                      11 *4 ADD ALL RECORDS TOGETHER                       *                     00124091         
+                                      12 *5 STORE SUM INTO TWO SEPARATE STORAGES           *                     00125091         
+                                      13 *6 ONE FOR GRAND SUM, ONE FOR LINE TOTAL          *                     00126091         
+                                      14 *7 COUNT LINES                                    *                     00127091         
+                                      15 *8 STORE LINE COUNT                               *                     00127191         
+                                      16 *9 PRINT ALL VALUES                               *                     00127291         
+                                      17 ***************************************************                     00128000         
+ 000000                               18 ASSIGN4  CSECT                                                          00129001         
+                                      19 *                                                                       00130000         
+ 000000                               20          USING ASSIGN4,15        ESTABLISH ADDRESSABILITY               00140001         
+                                      21 *                                                                       00150000         
+ 000000 1BAA                          22          SR    10,10             CLEAR R10                              00150153         
+ 000002 1BCC                          23          SR    12,12             CLEAR R12                              00150287         
+ 000004 E000 F070 0050 00070          24          XREAD BUFFER,80         READ INTO BUFFER                       00151033         
+                                      25 *                                                                       00152076         
+ 00000A 4740 F05A            0005A    26 READF    BC    B'0100',ENDREADF  BREAK IF COND CODE 1                   00160034         
+                                      27 *                                                                       00160135         
+ 00000E 58A0 F25C            0025C    28          L     10,TEMP           LOAD R10 WITH ITS VAL                  00160260         
+ 000012 58B0 F1D0            001D0    29          L     11,INCR           LOAD R11 WITH INCR VAL                 00160360         
+ 000016 58C0 F1CC            001CC    30          L     12,GNTOT          LOAD TOTAL INTO A R12                  00160491         
+ 00001A 1AAB                          31          AR    10,11             INCREMENT 10                           00160587         
+ 00001C 50A0 F25C            0025C    32          ST    10,TEMP           STORE R10 INTO TEMP                    00160687         
+                                      33 *                                                                       00160776         
+ 000020 5320 F070            00070    34          XDECI 2,BUFFER          CONVERT CHAR TO DEC STORE IN R2        00160890         
+ 000024 5330 1000            00000    35          XDECI 3,0(0,1)          CONVERT 2ND STORE IN R3                00160990         
+ 000028 5340 1000            00000    36          XDECI 4,0(0,1)          CONVERT 3RD STORE IN R4                00161090         
+ 00002C 5220 F0C6            000C6    37          XDECO 2,VAL1            CONVERT RECORD TO CHAR FORM            00161190         
+ 000030 5230 F0D7            000D7    38          XDECO 3,VAL2            CONVERT SECOND RECORD LIKEWISE         00161290         
+ 000034 5240 F0E8            000E8    39          XDECO 4,VAL3            CONVERT THIRD RECORDS LIKEWISE         00161390         
+                                      40 *                                                                       00161476         
+ 000038 1B88                          41          SR    8,8               ZERO OUT R8                            00161648         
+ 00003A 1A82                          42          AR    8,2               ADD R2 TO R8                           00161748         
+ 00003C 1A83                          43          AR    8,3               ADD R3 TO R8                           00161848         
+ 00003E 1A84                          44          AR    8,4               ADD R4 TO R8                           00161948         
+ 000040 1AC8                          45          AR    12,8              ADD TO TOT                             00162060         
+ 000042 50C0 F1CC            001CC    46          ST    12,GNTOT          STORE TOTAL                            00162191         
+ 000046 5280 F0F9            000F9    47          XDECO 8,SUM             STORE R8 AS CHARS                      00162378         
+                                      48 *                                                                       00162844         
+ 00004A E020 F0C0 0085 000C0          49          XPRNT CCV,133        PRINT READ RECORD                         00162995         
+ 000050 E000 F070 0050 00070          50          XREAD BUFFER,80         READ INTO BUFFER                       00163001         
+                                      51 *                                                                       00180001         
+ 000056 47F0 F00A            0000A    52          BC    B'1111',READF     LOOP BACK TO READF FOR ANY CODE        00188337         
+1                                                                                                               PAGE    2         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                      53 *                                                                       00188476         
+ 00005A 52A0 F20D            0020D    54 ENDREADF XDECO 10,LINES          STORE NUMBER OF LINES                  00190053         
+                                      55 *                                                                       00190176         
+ 00005E 52C0 F17E            0017E    56          XDECO 12,TOTAL          STORE TOTAL AS CHAR                    00190287         
+ 000062 E020 F1D4 0085 001D4          57          XPRNT CCC,133           PRNT RECORD NUMBER                     00191097         
+ 000068 E020 F145 0085 00145          58          XPRNT CV,133            PRNT GRAND TOTAL                       00192097         
+ 00006E 07FE                          59          BR    14                BREAK TO OS                            00200090         
+                                      60 *                                                                       00210053         
+                                      61          LTORG                                                          00221000         
+ 000070 6C6C6C6C6C6C6C6C              62 BUFFER   DC    80C'%'            CREATES BUFFER AND FILLS               00222001         
+                                      63 *                                                                       00223176         
+ 0000C0 F0                            64 CCV      DC    C'0'              CARRIAGE CONTROL                       00223290         
+ 0000C1 4040404040                    65          DC     5C' '            SPACES                                 00223390         
+ 0000C6                               66 VAL1     DS    CL12              STORAGE FOR RECORD 1                   00223490         
+ 0000D2 4040404040                    67          DC     5C' '            SPACES                                 00223590         
+ 0000D7                               68 VAL2     DS    CL12              STORAGE FOR RECORD 2                   00223690         
+ 0000E3 4040404040                    69          DC     5C' '            SPACES                                 00223790         
+ 0000E8                               70 VAL3     DS    CL12              STORAGE FOR RECORD 3                   00223890         
+ 0000F4 4040404040                    71          DC     5C' '            SPACES                                 00223990         
+                                      72 *                                                                       00224076         
+ 0000F9                               73 SUM      DS    CL12              STORAGE FOR LINE TOTAL                 00224190         
+ 000105 4040404040404040              74          DC    64C' '            SPACES                                 00224290         
+                                      75 *                                                                       00224392         
+ 000145 F0                            76 CV       DC    C'0'              CARRIAGE CONTROL                       00224492         
+ 000146 4040404040404040              77          DC    56C' '            SPACES                                 00224594         
+ 00017E                               78 TOTAL    DS    12C               STORAGE FOR GRAN TOTAL AS CHAR         00224694         
+ 00018A 4040404040404040              79          DC    64C' '            SPACES                                 00224794         
+                                      80 *                                                                       00224894         
+ 0001CC 00000000                      81 GNTOT    DC    F'0'              STORAGE FOR LINE TOTAL                 00224990         
+                                      82 *                                                                       00225076         
+ 0001D0 00000001                      83 INCR     DC    F'1'              STORES INCREMENT VALUE                 00225173         
+                                      84 *                                                                       00225296         
+ 0001D4 F0                            85 CCC      DC    C'0'                                                     00225395         
+ 0001D5 4040404040404040              86          DC    56C' '                                                   00225595         
+ 00020D 7C7C7C7C7C7C7C7C              87 LINES    DC    12C'@'            STORES TOTAL NUMBER OF LINES           00225695         
+ 000219 4040404040404040              88          DC    64C' '                                                   00225795         
+                                      89 *                                                                       00225895         
+ 00025C 00000000                      90 TEMP     DC    F'0'              STORES TEMPORARY HOLDER FOR VAL        00225973         
+                                      91 *********************************************************               00226090         
+                                      92 * AS A NOTE, THE PROFESSOR ASKED ME TO                  *               00226190         
+                                      93 * POINT OUT THAT LINUX'S X3270 DOES NOT LIKE            *               00226290         
+                                      94 * READING NUMBERS THAT ARE IN THE FIRST COLUMN          *               00226390         
+                                      95 * THUS ALL NUMBERS IN THE RECORD START IN COLUMN 2      *               00226490         
+                                      96 *********************************************************               00226590         
+                                      97          END   ASSIGN4                                                  00226601         
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:    5360 HIGH:     612 LEAVING:  487596 FREE BYTES. AVERAGE:       60 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.000 SECS,    98000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+0               12               34               56              102                                                             
+0               45               98               23              166                                                             
+0               55               88               99              242                                                             
+1               10                9               32               51                                                             
+0               66               22                7               95                                                             
+0               98               76               54              228                                                             
+0                1                1                1                3                                                             
+0                                                                   7                                                             
+0                                                                 887                                                             
+0*** EXECUTION TIME =    0.000 SECS.       163 INSTRUCTIONS EXECUTED -   163000 INSTRUCTIONS/SEC ***                              
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                
